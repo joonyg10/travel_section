@@ -10,11 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  a { 
-    text-decoration: none;
-  }
-  
-  ul, li {
-    list-style: none;
+  body { 
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
   }
 `;
