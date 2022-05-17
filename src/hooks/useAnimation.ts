@@ -14,32 +14,32 @@ function useAnimation({ onAnimate }: AnimationProps) {
     animationRef.current = requestAnimationFrame(animationCallback);
   };
 
-  const animate = () => {
-    let begin: number;
+  useEffect(() => {
+    const animate = () => {
+      let begin: number;
 
-    const animateCallback = (timeStamp: number) => {
-      if (!begin) {
-        begin = timeStamp;
-      }
+      const animateCallback = (timeStamp: number) => {
+        if (!begin) {
+          begin = timeStamp;
+        }
 
-      let progress: number = (timeStamp - begin) / DURATION;
-      if (progress > 1) {
-        progress = 1;
-      }
+        let progress: number = (timeStamp - begin) / DURATION;
+        if (progress > 1) {
+          progress = 1;
+        }
 
-      onAnimate(progress);
-      if (progress < 1) {
-        requestNextAnimation(animateCallback);
-      }
+        onAnimate(progress);
+        if (progress < 1) {
+          requestNextAnimation(animateCallback);
+        }
+      };
+
+      requestNextAnimation(animateCallback);
     };
 
-    requestNextAnimation(animateCallback);
-  };
-
-  useEffect(() => {
     requestNextAnimation(animate);
     return () => cancelAnimationFrame(animationRef.current);
-  }, []);
+  }, [onAnimate]);
 }
 
 export default useAnimation;
