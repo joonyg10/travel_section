@@ -45,12 +45,15 @@
 
 # 컴포넌트 구조
 
-## src
+# src
 
 - [components/](./src/components)
   - [Award/](./src/components/Award)
     - [index.tsx](./src/components/Award/index.tsx)
     - [styles.ts](./src/components/Award/styles.ts)
+  - [FadeIn/](./src/components/FadeIn)
+    - [index.tsx](./src/components/FadeIn/index.tsx)
+    - [styles.ts](./src/components/FadeIn/styles.ts)
   - [Image/](./src/components/Image)
     - [index.tsx](./src/components/Image/index.tsx)
     - [styles.ts](./src/components/Image/styles.ts)
@@ -81,6 +84,7 @@
 | Image     | 이미지에 대한 스타일이 적용 되어있으며, props로 size를 넘겨주어 크기 조절이 가능한 컴포넌트 |
 | Statistic | 지표 문구를 나타내는 컴포넌트                                                               |
 | Award     | 수상 내역을 나타내는 컴포넌트로 Image와 문구들로 구성                                       |
+| FadeIn    | FadeIn 되는 애니메이션 효과를 추가해주는 Wrapper형태의 컴포넌트                             |
 
 <br />
 <br />
