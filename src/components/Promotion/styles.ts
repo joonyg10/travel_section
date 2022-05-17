@@ -33,6 +33,15 @@ const Item = styled.div<ItemProps>`
     flex && theme.mixin.flex(justify, align)};
   flex-direction: ${({ flexRow }) => (flexRow ? "column" : "row")};
   justify-self: end;
+
+  &::after {
+    content: attr(data-subText);
+    position: absolute;
+    bottom: 15%;
+    inset-inline: 0;
+    text-align: center;
+    font-size: 1.25rem;
+  }
 `;
 
 const FadeInItem = styled(Item)`
