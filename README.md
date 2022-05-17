@@ -12,7 +12,7 @@
 # 시행 방법
 
 1. git clone을 통해 local에 저장합니다.
-2. npm install OR yarn install을 통해 필요한 dependency를 다운로드 받습니다.
+2. npm install OR yarn add을 통해 필요한 dependency를 다운로드 받습니다.
 3. npm run start OR yarn start를 시행 시켜 프로젝트를 시행합니다.
 4. npm run lint:es 및 npm run lint:etc를 통하여, eslint, prettier 규칙에 맞게 되었는지 테스트 할 수 있습니다.
 
