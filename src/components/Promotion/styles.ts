@@ -33,10 +33,12 @@ const Item = styled.div<ItemProps>`
     flex && theme.mixin.flex(justify, align)};
   flex-direction: ${({ flexRow }) => (flexRow ? "column" : "row")};
   justify-self: end;
+`;
 
+const FadeInItem = styled(Item)`
   opacity: 0;
   animation: ${boxFadeIn} 700ms ease-in forwards;
   animation-delay: ${({ delayOrder }) => `${(delayOrder ?? 0) * 100}ms`};
 `;
 
-export { Container, Item };
+export { Container, Item, FadeInItem };
