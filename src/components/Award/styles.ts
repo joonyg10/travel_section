@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 const Container = styled.div`
   ${({ theme }) => theme.mixin.flex()};
+  gap: 0.5em;
 
-  img {
-    width: 3.5rem;
-    height: 3.5rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+
+  & + & {
+    margin-left: 0.675em;
   }
 `;
 

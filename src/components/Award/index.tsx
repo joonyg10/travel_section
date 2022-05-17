@@ -11,7 +11,7 @@ interface AwardProps {
 function Award({ src, store, award }: AwardProps) {
   return (
     <Container>
-      <Image src={src} alt="app store logo" />
+      <Image src={src} alt="app store logo" size={4} />
       <Item>
         <p>{store}</p>
         <p>{award}</p>
