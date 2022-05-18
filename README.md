@@ -23,11 +23,15 @@
 
 [![Styled Components](https://camo.githubusercontent.com/41326de293d3848e2ab0f29bf1680427128757fe6b586ceddf1097cb4eeb5ff7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7374796c65642d2d636f6d706f6e656e74732d4442373039333f7374796c653d666f722d7468652d6261646765266c6f676f3d7374796c65642d636f6d706f6e656e7473266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/41326de293d3848e2ab0f29bf1680427128757fe6b586ceddf1097cb4eeb5ff7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7374796c65642d2d636f6d706f6e656e74732d4442373039333f7374796c653d666f722d7468652d6261646765266c6f676f3d7374796c65642d636f6d706f6e656e7473266c6f676f436f6c6f723d7768697465)
 
-- 기존의 css, scss를 이용하는 경우 사용할 때마다 조건문을 이용하여 className을 바꾸어 주는 것은 번거롭고 가독성이 떨어진다 판단하여 스타일을 컴포넌트로 분리하여 관리하고자 사용하게 되었습니다.
+- 기존의 css, scss를 이용하는 경우 상태에 따라 조건문으로 className을 바꾸어 주어야 하기에 번거롭고 가독성이 떨어집니다. 하여, 스타일을 컴포넌트로 분리하여 관리하고자 styled-components를 사용하게 되었습니다.
+
+- css를 reset하기 위해 , styled-reset를 같이 사용하였습니다.
+
+<br />
 
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-- 여러 개의 컴포넌트, 커스텀 훅을 제작하는 경우에 있어서 구조를 조금 더 쉽게 파악할 수 있기에 타입스크립트를 사용하는 것을 선호하여 사용했습니다.
+- 여러 개의 컴포넌트, 커스텀 훅, 함수를 구현할 때, 구조를 조금 더 쉽게 파악할 수 있기에 타입스크립트를 사용하는 것을 선호하여 사용했습니다.
 
 <br />
 <br />
@@ -97,9 +101,10 @@
 
 ## Fadein 애니메이션
 
-> animation: ${boxFadeIn} 700ms ease-in forwards
+> animation: ${boxFadeIn} 700ms ease-in
 
 - FadeIn 컴포넌트를 생성하여, `boxFadeIn`이라는 애니메이션이 시행되도록 구현
+- from, to를 지정하여 opacity와 transform: translateY() 의 값을 애니메이션 되도록 설계
 - props로 나타나는 순번을 받아, 순번 \* 100ms만큼 animation-delay를 설정
 
 <br />
@@ -109,7 +114,7 @@
 
 - 2초 동안 숫자가 증가하는 애니메이션 효과를 구현
 - EaseIn 함수를 적절히 할당하여, 증가속도가 느려지는 효과 추가
-- requestAnimationFrame을 통해 구현하였으며, 애니메이션을 담당하는 부분은 커스텀 훅으로 분리
+- 애니메이션을 담당하는 부분은 커스텀 훅으로 분리
 
 <br />
 
@@ -124,7 +129,7 @@
 ### <span style="color:lightgray">Statistic 컴포넌트에서의 활용</span>
 
 - onAnimate 함수로는 counter의 변수를 업데이트 하는 로직을 시행하도록 구현
-- 커스텀 훅을 통해 구한 진행률을 넘겨 받아 표시되어야 할, 현재의 counter 상태를 계산
+- 상단에 서술한 useAnimation 커스텀 훅을 통해 구한 진행률을 넘겨 받아 표시되어야 할, 현재의 counter 상태를 계산
 - Easing 함수의 경우 https://easings.net/en#easeOutCubic 의 Function을 참조하여 시간이 지날수록 속도가 느려지도록 구현
 
 <br />
@@ -148,5 +153,5 @@
 # 최종 결과
 
 <p align='center'>
-  <img src="https://media.giphy.com/media/i5YaK391xUxf4pcenJ/giphy.gif"  alt="Final Result GIF here" />
+  <img src="https://media.giphy.com/media/9nTvp8jxoBvCAVbT3h/giphy.gif" alt="Final Result GIF here" />
 </p>
