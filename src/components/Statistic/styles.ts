@@ -8,9 +8,9 @@ const Container = styled.p`
   }
 `;
 
-const AnimatedCount = styled.strong<{ textLength: number }>`
+const AnimatedCount = styled.strong<{ counterSize: number }>`
   display: inline-block;
-  min-width: ${({ textLength }) => `${1.875 * textLength}rem`};
+  min-width: ${({ counterSize }) => `${1.875 * counterSize}rem`};
   margin-right: -0.375rem;
   font-weight: bold;
 `;

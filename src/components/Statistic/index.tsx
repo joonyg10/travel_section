@@ -23,7 +23,7 @@ function Statistic({ status, user, children }: StatisticProps) {
 
   return (
     <Container>
-      <AnimatedCount textLength={`${status}`.length}>
+      <AnimatedCount counterSize={`${status}`.length}>
         {Math.round(counter)}
       </AnimatedCount>
       <BoldText>만 {user ? "명" : "개"}</BoldText>
