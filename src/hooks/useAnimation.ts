@@ -15,14 +15,10 @@ function useAnimation({ onAnimate }: AnimationProps) {
   };
 
   useEffect(() => {
-    const animate = () => {
-      let begin: number;
+    const animate = (timeStamp: number) => {
+      const begin: number = timeStamp;
 
       const animateCallback = (timeStamp: number) => {
-        if (!begin) {
-          begin = timeStamp;
-        }
-
         let progress: number = (timeStamp - begin) / DURATION;
         if (progress > 1) {
           progress = 1;
