@@ -13,7 +13,7 @@ const boxFadeIn = keyframes`
 `;
 
 const Container = styled.div<{ delay?: number }>`
-  animation: ${boxFadeIn} 700ms ease-in forwards;
+  animation: ${boxFadeIn} 700ms ease-in;
   animation-delay: ${({ delay }) => `${(delay ?? 0) * 100}ms`};
 `;
 

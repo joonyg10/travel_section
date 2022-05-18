@@ -5,7 +5,6 @@ const ImageStyle = styled.img<{ size?: number }>`
   max-width: 100%;
   width: ${({ size }) => `${size}rem`};
   height: ${({ size }) => `${size}rem`};
-
   object-fit: cover;
 `;
 
