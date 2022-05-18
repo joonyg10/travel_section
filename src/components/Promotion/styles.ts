@@ -1,8 +1,8 @@
 import styled, { AlignProps, JustifyProps } from "styled-components";
 
-const Container = styled.div`
+const Container = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 2fr 3fr;
   column-gap: 10em;
   width: 1200px;
   margin-inline: auto;
