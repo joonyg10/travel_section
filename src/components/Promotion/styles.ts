@@ -25,6 +25,7 @@ const Stack = styled.div<ItemProps>`
 const Typography = styled.p`
   font-size: 1.25rem;
   text-align: center;
+  transform: translateY(-3rem);
 `;
 
 export { Container, Typography, Stack };
